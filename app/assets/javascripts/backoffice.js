@@ -2,7 +2,8 @@
 //= require notifyjs
 //= require bootbox
 
-/* Sobrescreve data-confirm do Rails */
+
+/* Sobrescreve  data-confirm do Rails */
 
 $.rails.allowAction = function(element) {
   var message = element.attr('data-confirm');

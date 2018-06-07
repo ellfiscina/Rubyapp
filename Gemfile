@@ -18,8 +18,8 @@ gem 'bootstrap_sb_admin_base_v2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-notifyjs'
-
 end
+gem 'enum_help'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
