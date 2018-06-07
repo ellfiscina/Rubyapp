@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.0'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
+gem 'bootbox-rails'
 # Manage Procfile-based applications
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden
@@ -14,8 +15,11 @@ gem 'devise'
 gem 'devise-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-notifyjs'
+
+end
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -59,6 +63,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

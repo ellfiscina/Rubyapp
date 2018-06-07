@@ -26,3 +26,16 @@ categories.each do |category|
 end
 
 puts "[OK]"
+
+
+puts "Cadastrando o ADMINISTRADOR Padrão..."
+
+Admin.create!(
+  name: "Admin",
+  email: "admin@admin.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: 0
+)
+
+puts "[OK]"
