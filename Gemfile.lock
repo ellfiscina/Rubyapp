@@ -136,6 +136,7 @@ GEM
       railties (= 5.2.0)
       sprockets-rails (>= 2.0.0)
     rails-assets-bootstrap (4.1.1)
+    rails-assets-notifyjs (0.4.2)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -227,6 +228,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails-assets-bootstrap!
+  rails-assets-notifyjs!
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
