@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.0'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
 gem 'bootbox-rails'
+gem 'pundit'
 # Manage Procfile-based applications
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden
@@ -36,7 +37,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+#gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -63,6 +64,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'mailcatcher'
   gem 'faker'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
