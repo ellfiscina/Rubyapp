@@ -21,6 +21,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-notifyjs'
 end
 gem 'enum_help'
+gem 'money-rails'
+gem 'paperclip', '~>6.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -66,6 +68,7 @@ end
 group :development do
   gem 'mailcatcher'
   gem 'faker'
+  gem 'lerolero_generator'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

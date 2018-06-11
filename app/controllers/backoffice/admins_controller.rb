@@ -41,7 +41,8 @@ class Backoffice::AdminsController < BackofficeController
     admin_name = @admin.name
 
     if @admin.destroy
-      redirect_to backoffice_admins_path, notice: I18n.t('messages.destroyed_with', item: admin_name)
+      redirect_to backoffice_admins_path,
+          notice: I18n.t('messages.destroyed_with', item: admin_name)
     else
       render :index
     end
