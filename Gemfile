@@ -17,7 +17,7 @@ gem 'devise-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-bootstrap', '~> 3.3.7'
   gem 'rails-assets-notifyjs'
 end
 gem 'enum_help'
