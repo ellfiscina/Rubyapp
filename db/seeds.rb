@@ -31,11 +31,22 @@ puts "[OK]"
 puts "Cadastrando o ADMINISTRADOR Padrão..."
 
 Admin.create!(
-  name: "Admin",
+  name: "Admin Padrão",
   email: "admin@admin.com",
   password: "123456",
   password_confirmation: "123456",
   role: 0
+)
+
+puts "[OK]"
+
+
+puts "Cadastrando o MEMBRO Padrão..."
+
+Member.create!(
+  email: "membro@membro.com",
+  password: "123456",
+  password_confirmation: "123456",
 )
 
 puts "[OK]"
