@@ -10,6 +10,6 @@
 
 >>[ImageMagick](https://www.imagemagick.org)
 ```
-sudo apt-get-update
+sudo apt-get update
 sudo apt-get install imagemagick
 ```
