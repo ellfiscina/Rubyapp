@@ -16,9 +16,6 @@
     <%= stylesheet_link_tag    'site/profile', media: 'all' %>
 
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'site' %>
-    <%= javascript_include_tag 'site/profile' %>
 
     <%= csrf_meta_tags %>
 
@@ -47,6 +44,9 @@
                     <%= link_to "Dashboard", site_profile_dashboard_index_path %>
                 </li>
                 <li>
+                    <%= link_to "Novo anúncio", new_site_profile_ad_path %>
+                </li>
+                <li>
                     <%= link_to "Meus anúncios", site_profile_ads_path %>
                 </li>
             </ul>
@@ -68,9 +68,13 @@
     </div>
     <!-- /#wrapper -->
 
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'site' %>
+    <%= javascript_include_tag 'site/profile' %>
+    <%#= javascript_include_tag 'site/profile/ads' %>
 
+    <%= yield :javascripts %>
+
+    <%= render partial: 'layouts/shared/notifications' %>
 </body>
-
-
-
 </html>

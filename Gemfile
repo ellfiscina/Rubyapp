@@ -18,11 +18,15 @@ gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~> 3.3.7'
-  gem 'rails-assets-notifyjs'
+  # gem 'rails-assets-notifyjs'
+  gem 'rails-assets-bootstrap.growl'
+  gem 'rails-assets-animate-css'
 end
 gem 'enum_help'
 gem 'money-rails'
 gem 'paperclip', '~>6.0.0'
+gem 'jquery-ui-rails'
+gem 'redcarpet'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -69,6 +73,7 @@ group :development do
   gem 'mailcatcher'
   gem 'faker'
   gem 'lerolero_generator'
+  gem 'doctor_ipsum'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
