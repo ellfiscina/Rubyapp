@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.0'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
 gem 'bootbox-rails'
+# Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
 # Manage Procfile-based applications
 gem 'foreman'
@@ -17,17 +18,29 @@ gem 'devise-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 source 'https://rails-assets.org' do
+  # Bootstrap
   gem 'rails-assets-bootstrap', '~> 3.3.7'
   # gem 'rails-assets-notifyjs'
+  # Notificação
   gem 'rails-assets-bootstrap.growl'
+  gem 'rails-assets-bootstrap-markdown'
   gem 'rails-assets-animate-css'
+  gem 'rails-assets-marked'
 end
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
+# Integration of RubyMoney - Money with Rails
 gem 'money-rails'
+# Easy file attachment management for ActiveRecord
 gem 'paperclip', '~>6.0.0'
+# jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
+# The safe Markdown parser, reloaded.
 gem 'redcarpet'
+# FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord
+gem 'friendly_id'
 # Use sqlite3 as the database for Active Record
+
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -43,7 +56,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-#gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

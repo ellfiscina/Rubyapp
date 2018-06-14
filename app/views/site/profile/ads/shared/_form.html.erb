@@ -32,7 +32,7 @@
     <div class="col-xs-4">
       <div class="form-group">
         <%= f.label :category %>
-        <%= f.collection_select :category_id, Category.all, :id, :description, {}, { class: "form-control" } %>
+        <%= f.collection_select :category_id, Category.all.order(:description), :id, :description, { class: "form-control" } %>
       </div>
     </div>
   </div>
@@ -84,20 +84,6 @@
       <div class="form-group">
         <%= f.label :description_md %>
         <%= f.text_area :description_md, class: "form-control", rows: 10 %>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="form-group">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            Preview
-          </div>
-          <div class="panel-body">
-            <%= @ad.description&.html_safe %>
-          </div>
-        </div>
       </div>
     </div>
   </div>

@@ -5,22 +5,26 @@ class Ad < ActiveRecord::Base
 
   # Associations
   belongs_to :member, optional: true
-  belongs_to :category
+  belongs_to :category, counter_cache: true
 
+  # Scopes
+  scope :descending_order, -> (qtd = 9) { limit(qtd).order(created_at: :desc) }
+  scope :of_the, -> (member) { where(member: member) }
+  scope :by_category, -> (id) { where(category: id) }
+
+  # Pictures
   has_attached_file :picture,
           styles: { large: "800x300#", medium: "320x150#", thumb: "100x100>" },
           default_url: "/images/:style/missing.png"
 
+  # Validations
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
-
-  monetize :price_cents
-
-  scope :descending_order, -> (qtd = 9) { limit(qtd).order(created_at: :desc) }
-  scope :of_the, -> (member) { where(member: member) }
 
   validates :title, :description_md, :category, presence: true
   validates :picture, :finish_date, presence: true
   validates :price, numericality: {greater_than: 0}
+
+  monetize :price_cents
 
   private
 

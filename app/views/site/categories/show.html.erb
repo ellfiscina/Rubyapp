@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<div id="home" class="container">
+<div class="container">
 
   <div class="row">
 
@@ -7,10 +7,13 @@
 
     <div id="home-detail" class="col-md-9">
 
-      <%= render partial: 'site/shared/carousel' %>
-
       <div class="row">
-
+        <div class="well">
+          <h2 style="text-align: center;">
+            <%= @category.description %>
+          </h2>
+        </div>
+        <br>
         <%= render partial: 'site/shared/ads' %>
 
       </div>

@@ -22,7 +22,7 @@ categories = [ "Animais e acessórios" ,
 # Cria as categorias para popular o db
 # Se já existir, não repete (find_or_create_by)
 categories.each do |category|
-  Category.find_or_create_by(description: category)
+  Category.friendly.find_or_create_by(description: category)
 end
 
 puts "[OK]"
