@@ -10,6 +10,10 @@
 
 >>[ImageMagick](https://www.imagemagick.org)
 ```
-sudo apt-get update
 sudo apt-get install imagemagick
+```
+
+>>[Graphviz](https://www.graphviz.org) -- Apenas para ambiente de desenvolvimento
+```
+sudo apt-get install graphviz
 ```

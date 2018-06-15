@@ -1,5 +1,8 @@
 class Ad < ActiveRecord::Base
 
+  # Constants
+  QTT_PER_PAGE = 6
+
   # Callbacks
   before_save :md_to_html
 
@@ -8,9 +11,14 @@ class Ad < ActiveRecord::Base
   belongs_to :category, counter_cache: true
 
   # Scopes
-  scope :descending_order, -> (qtd = 9) { limit(qtd).order(created_at: :desc) }
+  scope :descending_order, -> (page = 1) {
+    order(created_at: :desc).page(page).per(QTT_PER_PAGE)
+  }
   scope :of_the, -> (member) { where(member: member) }
   scope :by_category, -> (id) { where(category: id) }
+  scope :search, -> (q, page) {
+    where("title LIKE ?", "%#{q}%").page(page).per(QTT_PER_PAGE)
+  }
 
   # Pictures
   has_attached_file :picture,

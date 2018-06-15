@@ -39,8 +39,10 @@ gem 'jquery-ui-rails'
 gem 'redcarpet'
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord
 gem 'friendly_id'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+gem 'kaminari-i18n'
 # Use sqlite3 as the database for Active Record
-
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
