@@ -9,16 +9,19 @@ class Ad < ActiveRecord::Base
   # Associations
   belongs_to :member, optional: true
   belongs_to :category, counter_cache: true
+  has_many :comments
 
   # Scopes
   scope :descending_order, -> (page = 1) {
     order(created_at: :desc).page(page).per(QTT_PER_PAGE)
   }
-  scope :of_the, -> (member) { where(member: member) }
-  scope :by_category, -> (id) { where(category: id) }
   scope :search, -> (q, page) {
     where("title LIKE ?", "%#{q}%").page(page).per(QTT_PER_PAGE)
   }
+  scope :by_category, -> (id, page) {
+    where(category: id).page(page).per(QTT_PER_PAGE)
+  }
+  scope :of_the, -> (member) { where(member: member) }
 
   # Pictures
   has_attached_file :picture,
@@ -32,7 +35,11 @@ class Ad < ActiveRecord::Base
   validates :picture, :finish_date, presence: true
   validates :price, numericality: {greater_than: 0}
 
+  # Gem do dinheiro
   monetize :price_cents
+
+  # Gem da avaliação
+  ratyrate_rateable "quality"
 
   private
 

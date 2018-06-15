@@ -11,7 +11,7 @@
       <p><%= truncate(ad.description_short, length: 80) %></p>
     </div>
     <div class="ratings">
-      <p class="pull-right">15 reviews</p>
+      <p class="pull-right"><%= "#{ad.comments_count} comentários" %></p>
       <p>
         <span class="glyphicon glyphicon-star"></span>
         <span class="glyphicon glyphicon-star"></span>
@@ -26,6 +26,6 @@
 
 <div class="row">
   <div class="text-center">
-    <%= paginate @ads%>
+    <%= paginate @ads %>
   </div>
 </div>

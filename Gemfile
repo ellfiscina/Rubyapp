@@ -42,6 +42,8 @@ gem 'friendly_id'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 gem 'kaminari-i18n'
+# A Ruby Gem that wraps the functionality of jQuery Raty library, and provides optional IMDB style rating.
+gem 'ratyrate', :git => 'git://github.com/dboggs95/rails-5-ratyrate.git', :branch => 'patch-1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

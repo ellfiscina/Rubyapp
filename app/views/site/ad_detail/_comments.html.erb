@@ -1,0 +1,14 @@
+<% @ad.comments.each do |comment| %>
+  <div class="row">
+    <div class="col-md-12">
+      <% if current_member.id == comment.member.id %>
+        <%= rating_for_user @ad, current_member, 'quality' %>
+      <% end -%>
+      <%= comment.member.email %>
+      <span class="pull-right"><%= l comment.created_at %></span>
+      <p><%= comment.body %></p>
+    </div>
+  </div>
+
+  <hr>
+<% end %>

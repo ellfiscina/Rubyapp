@@ -4,6 +4,7 @@
 ## Versões
 * *Ruby* - 2.5.1
 * *Rails* - 5.2.0
+* *Bootstrap* - 3
 
 
 ## Dependêcias do projeto
